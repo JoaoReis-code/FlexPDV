@@ -1,15 +1,26 @@
-import { Button } from "@mui/material";
-import { Routes, Route, Navigate } from "react-router-dom";
-import { useAppThemeContext } from "../shared/contexts";
+import { Button } from '@mui/material';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { useDrawerContext } from '../shared/contexts';
+import { useEffect } from 'react';
 
 export const AppRoutes = () => {
-    const { toggleTheme } = useAppThemeContext();
+  const { toggleDrawerOpen, setDrawerOptions} = useDrawerContext();
 
-    return(
-        <Routes>
-            <Route path="/pagina-inicial" element={<Button variant='contained' color="primary" onClick={toggleTheme}>Tema</Button>}/>
+  useEffect(() => {
+    setDrawerOptions([
+      {
+        label: 'Home',
+        icon: 'home',
+        path: 'pagina-inicial'
+      }
+    ]);
+  }, []);
 
-            <Route path="*" element={<Navigate to="/pagina-inicial"/>}/>
-        </Routes>
-    );
-}
+  return(
+    <Routes>
+      <Route path="/home" element={<Button variant='contained' color="primary" onClick={toggleDrawerOpen}>Menu</Button>}/>
+
+      <Route path="*" element={<Navigate to="/home"/>}/>
+    </Routes>
+  );
+};
