@@ -3,21 +3,22 @@ import { green, orange } from '@mui/material/colors';
 
 export const LightTheme = createTheme({
   palette:{
+    mode: 'dark',
     primary: {
-      main: orange[700],
-      dark: orange[800],
-      light: orange[500],
-      contrastText: '#ffffff',
+      main: green[800],
+      dark: green[900],
+      light: green[600],
+      contrastText: '#whitesmoke',
     },
     secondary: {
-      main: green[700],
-      dark: green[800],
-      light:green[500],
-      contrastText: '#ffffff',
+      main: orange[800],
+      dark: orange[900],
+      light:orange[600],
+      contrastText: '#whitesmoke',
     },
     background: { 
-      default: '#E7F9FD',
-      paper: '#ffffff',
+      default: '#DFF0F2',
+      paper: '#26323C',
     }
   }
 });
