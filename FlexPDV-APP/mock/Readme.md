@@ -1,0 +1,1 @@
+Para executar a simulação da API -> npx json-server -w -p 3333 .\mock\database.json

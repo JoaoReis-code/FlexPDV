@@ -1,0 +1,11 @@
+{
+  "produtos": [
+    {
+      "id" : 1,
+      "nome" : "coca-cola",
+      "valor" : "3.50",
+      "validade" : "02/02/2024",
+      "Descricao" : "Refrigerante de coca-cola"
+    }
+  ]
+}
